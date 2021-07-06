@@ -9,6 +9,7 @@ terraform {
     encrypt        = true
     key = "terraform"
     region = "ap-south-1"
+    profile = "default"
  }
 }
 
