@@ -7,6 +7,7 @@ terraform {
     bucket         = "kiranstatefilebucket"
     dynamodb_table = "terraform-lock-file"
     encrypt        = true
+    key = "terraform"
     region = "ap-south-1"
  }
 }
