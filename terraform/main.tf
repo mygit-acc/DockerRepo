@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 module "vpc" {
-    source = "./vpc"
+    source = "./VPC"
 }
 
 module "iam" {
