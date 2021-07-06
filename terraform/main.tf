@@ -10,6 +10,7 @@ terraform {
     key = "terraform"
     region = "ap-south-1"
     profile = "default"
+    shared_credentials_file = "/home/ec2-user/.aws/credentials"
  }
 }
 
