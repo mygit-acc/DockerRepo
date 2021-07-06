@@ -1,6 +1,6 @@
 provider "aws" {
   region = "ap-south-1"
-  shared_credentials_file = "/home/ec2-user/.aws/credentials"
+  shared_credentials_file = var.credentialfile
 }
 terraform {
   backend s3 {
@@ -10,7 +10,6 @@ terraform {
     key = "terraform"
     region = "ap-south-1"
     profile = "kartheekdevops"
-    shared_credentials_file = "/home/ec2-user/.aws/credentials"
  }
 }
 
