@@ -9,7 +9,7 @@ terraform {
     encrypt        = true
     key = "terraform"
     region = "ap-south-1"
-    profile = "default"
+    profile = "kartheekdevops"
     shared_credentials_file = "/home/ec2-user/.aws/credentials"
  }
 }
