@@ -1,6 +1,13 @@
 provider "aws" {
   region = "ap-south-1"
-  shared_credentials_file = "C:/Users/chilakala.sai.kiran/.aws/credentials"
+  shared_credentials_file = "/home/ec2-user/.aws/credentials"
+  backend s3 {
+    bucket         = "kiranstatefilebucket"
+    dynamodb_table = "terraform-lock-file"
+    encrypt        = true
+    key            = "/"
+    region = "ap-south-1"
+  }
 }
 
 module "vpc" {
