@@ -3,7 +3,7 @@ provider "aws" {
   shared_credentials_file = var.credentialfile
 }
 terraform {
-  backend s3 {
+  backend "s3" {
     bucket         = "kiranstatefilebucket"
     dynamodb_table = "terraform-lock-file"
     encrypt        = true
