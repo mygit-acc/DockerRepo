@@ -1,6 +1,7 @@
 provider "aws" {
   region = "ap-south-1"
-  shared_credentials_file = var.credentialfile
+  shared_credentials_file = "${var.credentialfile}"
+  profile = "devops"
 }
 
 /*terraform {
