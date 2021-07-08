@@ -11,7 +11,6 @@ terraform {
     encrypt        = true
     key = "terraform.tfstate"
     region = "ap-south-1"
-    shared_credentials_file = "/home/ec2-user/.aws/credentials"
     profile = "devops"
  }
 }
