@@ -15,6 +15,16 @@ terraform {
  }
 }
 
+data "terraform_remote_state" "network" {
+  backend = "s3"
+  config = {
+    bucket         = "kiranstatefilebucket"
+    encrypt        = true
+    key = "terraform.tfstate"
+    region = "ap-south-1"
+  }
+}
+
 
 module "vpc" {
     source = "./VPC"
