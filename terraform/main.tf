@@ -1,18 +1,17 @@
 provider "aws" {
-  region = "ap-south-1"
+  region                  = "ap-south-1"
   shared_credentials_file = "${var.credentialfile}"
+  profile                 = "devops"
 }
 
 terraform {
   backend "s3" {
-    bucket         = "kiranstatefilebucket"
-    encrypt        =  true
-    key            = "terraform.tfstate"
-    region         = "ap-south-1"
-    profile        = "devops"
- }
+    bucket  = "kiranstatefilebucket"
+    key     = "global/terraform.tfstate"
+    region  = "ap-south-1"
+    profile = "devops"
+  }
 }
-
 
 module "vpc" {
     source = "./VPC"
